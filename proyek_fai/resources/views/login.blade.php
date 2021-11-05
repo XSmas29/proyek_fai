@@ -17,18 +17,16 @@
                                 <h1 class="fw-bold mb-5">Welcome</h1>
                                 <i class="fas fa-user-astronaut fa-3x my-5"></i>
                                 <div class="form-outline mb-4">
-                                    <input type="email" id="typeEmail" class="form-control form-control-lg" placeholder="Email / Username"/>
+                                    <input type="email" name="username" class="form-control form-control-lg" placeholder="Email / Username"/>
                                 </div>
                                 <div class="form-outline mb-5">
-                                    <input type="password" id="typePassword" class="form-control form-control-lg" placeholder="Password"/>
+                                    <input type="password" name="password" class="form-control form-control-lg" placeholder="Password"/>
                                 </div>
                                 <button class="btn btn-primary btn-lg btn-rounded px-5 text-light" type="submit">Login</button>
                             </div>
-                
                             <div>
-                                <p class="mb-0">Don't have an account? <a href="#!" class="text-body fw-bold mb-2">Sign Up</a></p>
+                                <p class="mb-0">Don't have an account? <a href="{{url('/register')}}" class="text-body fw-bold mb-2" name="btnLogin">Login</a></p>
                             </div>
-                
                             </div>
                         </div>
                     </div>
