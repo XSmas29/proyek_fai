@@ -34,7 +34,7 @@
                                 <div class="form-outline mb-5">
                                     <input type="password" name="confirm" class="form-control form-control-lg" placeholder="Re-type Password"/>
                                 </div>
-                                <button class="btn btn-primary btn-lg btn-rounded px-5 text-light" type="submit" name="btnRegister">Register</button>
+                                <input class="btn btn-primary btn-lg btn-rounded px-5 text-light" type="submit" name="btnRegister" value="Register">
                             </div>
                             <div>
                                 <p class="mb-0">Don't have an account? <a href="{{ url('/login') }}" class="text-body fw-bold mb-2">Sign Up</a></p>

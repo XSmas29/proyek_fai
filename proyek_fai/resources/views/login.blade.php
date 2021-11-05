@@ -22,11 +22,11 @@
                                 <div class="form-outline mb-5">
                                     <input type="password" name="password" class="form-control form-control-lg" placeholder="Password"/>
                                 </div>
-                                <button class="btn btn-primary btn-lg btn-rounded px-5 text-light" type="submit">Login</button>
+                                <input class="btn btn-primary btn-lg btn-rounded px-5 text-light" type="submit" value="Login">
                             </div>
-                            <div>
-                                <p class="mb-0">Don't have an account? <a href="{{url('/register')}}" class="text-body fw-bold mb-2" name="btnLogin">Login</a></p>
-                            </div>
+                                <div>
+                                    <p class="mb-0">Don't have an account? <a href="{{url('/register')}}" class="text-body fw-bold mb-2" name="btnLogin">Login</a></p>
+                                </div>
                             </div>
                         </div>
                     </div>
