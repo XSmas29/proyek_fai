@@ -3,7 +3,7 @@
 @section('title')
     MyItem | Login
 @endsection
-    
+
 @section("main")
 
 <div class="container">
@@ -22,10 +22,10 @@
                                 <div class="form-outline mb-5">
                                     <input type="password" name="password" class="form-control form-control-lg" placeholder="Password"/>
                                 </div>
-                                <input class="btn btn-primary btn-lg btn-rounded px-5 text-light" type="submit" value="Login">
+                                <input class="btn btn-primary btn-lg btn-rounded px-5 text-light" type="submit" value="Login" name="btnLogin">
                             </div>
                                 <div>
-                                    <p class="mb-0">Don't have an account? <a href="{{url('/register')}}" class="text-body fw-bold mb-2" name="btnLogin">Login</a></p>
+                                    <p class="mb-0">Don't have an account? <a href="{{url('/register')}}" class="text-body fw-bold mb-2" >Register</a></p>
                                 </div>
                             </div>
                         </div>

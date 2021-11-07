@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\AccountController;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,7 +20,10 @@ Route::get('/login', function(){
 });
 
 Route::get('/register', function(){
-    return view("register");
+    return view("register",[
+        'msg' => ''
+    ]);
+
 });
 
 Route::post('/login', [AccountController::class, "login"]);
