@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\SellerController;
 use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -16,15 +17,31 @@ use Illuminate\Support\Facades\Route;
 Route::redirect('/', '/login');
 
 Route::get('/login', function(){
+    session()->forget("login");
     return view("login");
 });
 
 Route::get('/register', function(){
-    return view("register",[
-        'msg' => ''
-    ]);
-
+    return view("register");
 });
 
 Route::post('/login', [AccountController::class, "login"]);
 Route::post('/register', [AccountController::class, "register"]);
+
+Route::middleware(['cekseller'])->group(function(){
+    Route::prefix("/seller")->group(function(){
+        Route::get("/", function(){
+            return view("seller/home");
+        });
+
+        Route::get("/order", [SellerController::class, "listOrder"]);
+
+        Route::get("/product/add", function(){
+            return view("seller/add");
+        });
+
+        Route::get("/product/list", function(){
+            return view("seller/list");
+        });
+    });
+});

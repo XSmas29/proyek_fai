@@ -1,15 +1,15 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Kategori extends Model
+class HTrans extends Model
 {
     use HasFactory;
 
-    protected $table = "kategori";
+    protected $table = "htrans";
     protected $primaryKey = "id";
     public $timestamps = false;
 }

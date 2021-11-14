@@ -1,15 +1,16 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class HTrans extends Model
+class User extends Model
 {
     use HasFactory;
 
-    protected $table = "htrans";
+    protected $table = "user";
     protected $primaryKey = "id";
     public $timestamps = false;
+    protected $keyType = "string";
 }

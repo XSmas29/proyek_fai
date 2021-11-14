@@ -1,16 +1,15 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model
+class Wishlist extends Model
 {
     use HasFactory;
 
-    protected $table = "username";
+    protected $table = "wishlist";
     protected $primaryKey = "id";
     public $timestamps = false;
-    protected $keyType = "string";
 }
