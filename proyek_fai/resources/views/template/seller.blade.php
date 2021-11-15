@@ -2,18 +2,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
 <style>
-    .form-control:focus {
-        transition: 0.8s;
-        border-color: rgba(167, 212, 255, 0.438);
-        box-shadow: 0px 0px 8px rgba(40, 150, 253, 0.514) inset, 0px 0px 8px rgba(40, 150, 253, 0.514);
-    }
-    .form-control {
-        transition: 0.8s;
-        border-color: rgb(228, 228, 228);
-    }
-    .bg-success{
-        transition: 0.8s;
-    }
     .card{
         box-shadow: rgba(65, 123, 231, 0.25) 0px 14px 28px, rgba(79, 78, 128, 0.22) 0px 10px 10px;
     }

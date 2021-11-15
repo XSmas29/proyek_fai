@@ -14,7 +14,7 @@
                     <li>
                         <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                             <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Orders</span></a>
-                        <ul class="collapse show flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                        <ul class="collapse flex-column ms-1" id="submenu1" data-bs-parent="#menu">
                             <li>
                                 <a href="{{url('/seller/order/?status=all')}}" class="nav-link px-0"> <span class="d-none d-sm-inline">All</span></a>
                             </li>

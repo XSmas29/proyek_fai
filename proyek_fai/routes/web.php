@@ -36,12 +36,11 @@ Route::middleware(['cekseller'])->group(function(){
 
         Route::get("/order", [SellerController::class, "listOrder"]);
 
-        Route::get("/product/add", function(){
-            return view("seller/add");
-        });
+        Route::get("/product/add", [SellerController::class, "formAdd"]);
 
-        Route::get("/product/list", function(){
-            return view("seller/list");
-        });
+        Route::get("/product/list", [SellerController::class, "listProduk"]);
+
+
+        Route::post("/product/add", [SellerController::class, "addProduk"]);
     });
 });

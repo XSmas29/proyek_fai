@@ -45,7 +45,7 @@
                                     </div>
                                     @error("toko")<small class="text-danger text-left"> ({{ $message }}) </small>@enderror
                                     <div class="form-outline mb-3">
-                                        <input type="text" name="toko" id='txtToko' class="form-control form-control-lg" placeholder="Toko"/>
+                                        <input type="text" name="toko" id='txtToko' class="form-control form-control-lg" placeholder="Nama Toko"/>
                                     </div>
                                     @error("role")<small class="text-danger text-left"> ({{ $message }}) </small>@enderror
                                     <div class="text-center">

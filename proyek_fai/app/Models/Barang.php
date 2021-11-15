@@ -12,4 +12,8 @@ class Barang extends Model
     protected $table = "barang";
     protected $primaryKey = "id";
     public $timestamps = false;
+
+    function kategori(){
+        return $this->hasOne(Kategori::class, "id", "fk_kategori");
+    }
 }
