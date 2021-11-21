@@ -16,4 +16,8 @@ class Barang extends Model
     function kategori(){
         return $this->hasOne(Kategori::class, "id", "fk_kategori");
     }
+
+    function owner(){
+        return $this->hasOne(User::class, "username", "fk_seller");
+    }
 }

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\SellerController;
+use App\Http\Controllers\CustomerController;
 use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,15 @@ Route::get('/register', function(){
 Route::post('/login', [AccountController::class, "login"]);
 Route::post('/register', [AccountController::class, "register"]);
 
+Route::middleware(['cekcustomer'])->group(function(){
+    Route::prefix("/customer")->group(function(){
+        Route::get("/", [CustomerController::class, "formHome"]);
+        Route::get("/detail/{id}", [CustomerController::class, "formDetail"]);
+
+        Route::post("/detail/{id}", [CustomerController::class, "add"]);
+    });
+});
+
 Route::middleware(['cekseller'])->group(function(){
     Route::prefix("/seller")->group(function(){
         Route::get("/", function(){
@@ -39,7 +49,6 @@ Route::middleware(['cekseller'])->group(function(){
         Route::get("/product/add", [SellerController::class, "formAdd"]);
 
         Route::get("/product/list", [SellerController::class, "listProduk"]);
-
 
         Route::post("/product/add", [SellerController::class, "addProduk"]);
     });

@@ -12,4 +12,8 @@ class Kategori extends Model
     protected $table = "kategori";
     protected $primaryKey = "id";
     public $timestamps = false;
+
+    public function products(){
+        return $this->hasMany(Barang::class, "fk_kategori", "id")->inRandomOrder()->limit(6);
+    }
 }
