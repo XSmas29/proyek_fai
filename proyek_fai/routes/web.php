@@ -56,5 +56,7 @@ Route::middleware(['cekseller'])->group(function(){
         Route::get("/product/list", [SellerController::class, "listProduk"]);
 
         Route::post("/product/add", [SellerController::class, "addProduk"]);
+
+        Route::post("/profile", [SellerController::class, "updatePict"]);
     });
 });

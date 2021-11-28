@@ -10,7 +10,7 @@ class User extends Model
     use HasFactory;
 
     protected $table = "user";
-    protected $primaryKey = "id";
+    protected $primaryKey = "username";
     public $timestamps = false;
     protected $keyType = "string";
 }
