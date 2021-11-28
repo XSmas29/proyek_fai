@@ -67,4 +67,10 @@ class SellerController extends Controller
             "dataproduk" => $dataproduk
         ]);
     }
+
+    public function formProfile(){
+        return view("seller/profile", [
+            "user" => session()->get("login")
+        ]);
+    }
 }

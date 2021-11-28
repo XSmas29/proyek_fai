@@ -43,6 +43,7 @@ Route::middleware(['cekseller'])->group(function(){
         Route::get("/", function(){
             return view("seller/home");
         });
+        Route::get("/profile", [SellerController::class, "formProfile"]);
 
         Route::get("/order", [SellerController::class, "listOrder"]);
 

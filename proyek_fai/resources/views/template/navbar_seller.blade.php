@@ -54,7 +54,7 @@
                             <span class="d-none d-sm-inline ms-3 me-2"><?= session()->get("login")->username?></span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark text-small shadow py-0" style="border-radius: 8px 8px 8px 8px">
-                            <li class=""><a class="dropdown-item pt-2" style="border-radius: 8px 8px 0 0" href="#">Profile</a></li>
+                            <li class=""><a class="dropdown-item pt-2" style="border-radius: 8px 8px 0 0" href="{{ url('/seller/profile') }}">Profile</a></li>
                             <li>
                                 <hr class="dropdown-divider my-0">
                             </li>
