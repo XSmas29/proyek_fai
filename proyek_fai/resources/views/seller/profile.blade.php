@@ -23,13 +23,14 @@
                     </div>
 
                     <form method="post" enctype="multipart/form-data">
-
+                        @csrf
                         <div class="row text-center my-3">
                             <div class="col-3">
                                 <label class="col-form-label">Profile Picture</label>
                             </div>
                             <div class="col-8">
-                                <input type="file" class="form-control" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03" aria-label="Upload">
+                                <input type="file" class="form-control" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03" aria-label="Upload" name="file">
+                                @error("file")<small class="text-danger text-left"> ({{ $message }}) </small>@enderror
                             </div>
                         </div>
 
@@ -38,12 +39,16 @@
                                 <label class="col-form-label">Password</label>
                             </div>
                             <div class="col-8">
-                                <input type="password" class="form-control" aria-describedby="passwordHelpInline">
+                                <input type="password" class="form-control" aria-describedby="passwordHelpInline" name="pass">
+                                @error("pass")<small class="text-danger text-left"> ({{ $message }}) </small>@enderror
                             </div>
                         </div>
 
+                        <div class="text-center my-3">
+                            <input class="btn btn-primary" type="submit" value="Update Picture" name="btnUpPict">
+                            <input class="btn btn-primary" type="submit" value="Update Password" name="btnUpPass">
+                        </div>
                     </form>
-
                 </div>
             </div>
         </div>

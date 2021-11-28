@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\HTrans;
 use App\Models\Kategori;
 use App\Models\Barang;
+use App\Models\User;
 
 class SellerController extends Controller
 {
@@ -72,5 +73,28 @@ class SellerController extends Controller
         return view("seller/profile", [
             "user" => session()->get("login")
         ]);
+    }
+
+    public function updatePict(Request $request){
+        if ($request->btnUpPict) {
+            $validationPic = [
+                "file" => ["required", "mimes:jpg,jpeg,png"]
+            ];
+            $this->validate($request, $validationPic);
+
+
+            // dd("ini pic");
+        }
+
+        if ($request->btnUpPass) {
+            $validation = ["pass" => "required"];
+            $this->validate($request, $validation);
+
+            $user = User::find(session('login')->username);
+            $user->password = $request->pass;
+
+            $user->save();
+        }
+        return redirect("/seller/profile")->with("msg", "Update Berhasil!");
     }
 }
